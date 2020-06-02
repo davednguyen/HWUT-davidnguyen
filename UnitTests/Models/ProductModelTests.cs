@@ -35,7 +35,8 @@ namespace UnitTests
         public void ProductModel_Get_ID_Default_Should_Pass()
         {
             var result = new ProductModel();
-            Assert.AreEqual(null, result.Id);
+            result.Id = "12345";
+            Assert.AreEqual("12345", result.Id);
         }
     }
 }
