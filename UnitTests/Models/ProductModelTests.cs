@@ -46,5 +46,14 @@ namespace UnitTests
             result.Maker = "SpaceX";
             Assert.AreEqual("SpaceX", result.Maker);
         }
+
+        [TestMethod]
+        public void ProductModel_Get_Image_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            result.Image = "http://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBWPuIz.img?ocid=msaut1";
+            string expectImage = "http://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBWPuIz.img?ocid=msaut1";
+            Assert.AreEqual(expectImage, result.Image);
+        }
     }
 }
