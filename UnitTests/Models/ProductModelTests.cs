@@ -38,5 +38,13 @@ namespace UnitTests
             result.Id = "12345";
             Assert.AreEqual("12345", result.Id);
         }
+
+        [TestMethod]
+        public void ProductModel_Get_Maker_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            result.Maker = "SpaceX";
+            Assert.AreEqual("SpaceX", result.Maker);
+        }
     }
 }
