@@ -30,5 +30,12 @@ namespace UnitTests
             // Assert
             Assert.AreEqual(DateTime.UtcNow.ToShortDateString(), result.Date.ToShortDateString());
         }
+
+        [TestMethod]
+        public void ProductModel_Get_ID_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            Assert.AreEqual(null, result.Id);
+        }
     }
 }
