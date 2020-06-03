@@ -79,5 +79,12 @@ namespace UnitTests
             string des = "322mi Range 145mph Top Speed 4.4s 0 - 60 mph";
             Assert.AreEqual(des, result.Description);
         }
+        [TestMethod]
+        public void ProductModel_Get_Sequence_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            result.Sequence = "1";
+            Assert.AreEqual("1", result.Sequence);
+        }
     }
 }
