@@ -63,5 +63,13 @@ namespace UnitTests
             result.Url = "https://www.tesla.com/";
             Assert.AreEqual("https://www.tesla.com/", result.Image);
         }
+
+        [TestMethod]
+        public void ProductModel_Get_Title_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            result.Title = "Model 3";
+            Assert.AreEqual("Model 3", result.Image);
+        }
     }
 }
