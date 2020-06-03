@@ -71,6 +71,7 @@ namespace UnitTests
             result.Title = "Model 3";
             Assert.AreEqual("Model 3", result.Title);
         }
+
         [TestMethod]
         public void ProductModel_Get_Description_Default_Should_Pass()
         {
@@ -79,6 +80,7 @@ namespace UnitTests
             string des = "322mi Range 145mph Top Speed 4.4s 0 - 60 mph";
             Assert.AreEqual(des, result.Description);
         }
+
         [TestMethod]
         public void ProductModel_Get_Sequence_Default_Should_Pass()
         {
@@ -86,6 +88,7 @@ namespace UnitTests
             result.Sequence = "1";
             Assert.AreEqual("1", result.Sequence);
         }
+
         [TestMethod]
         public void ProductModel_Get_Email_Default_Should_Pass()
         {
@@ -93,12 +96,21 @@ namespace UnitTests
             result.Email = "test@test.info";
             Assert.AreEqual("test@test.info", result.Email);
         }
+
         [TestMethod]
         public void ProductModel_Get_Logistics_Default_Should_Pass()
         {
             var result = new ProductModel();
             result.Logistics = "1";
             Assert.AreEqual("1", result.Logistics);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Ratings_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            result.AverageRating();
+            Assert.AreEqual(1, result.Ratings);
         }
     }
 }
