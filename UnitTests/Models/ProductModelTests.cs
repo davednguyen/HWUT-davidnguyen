@@ -61,7 +61,7 @@ namespace UnitTests
         {
             var result = new ProductModel();
             result.Url = "https://www.tesla.com/";
-            Assert.AreEqual("https://www.tesla.com/", result.Image);
+            Assert.AreEqual("https://www.tesla.com/", result.Url);
         }
 
         [TestMethod]
@@ -69,7 +69,15 @@ namespace UnitTests
         {
             var result = new ProductModel();
             result.Title = "Model 3";
-            Assert.AreEqual("Model 3", result.Image);
+            Assert.AreEqual("Model 3", result.Title);
+        }
+        [TestMethod]
+        public void ProductModel_Get_Description_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            result.Description = "322mi Range 145mph Top Speed 4.4s 0 - 60 mph";
+            string des = "322mi Range 145mph Top Speed 4.4s 0 - 60 mph";
+            Assert.AreEqual(des, result.Description);
         }
     }
 }
