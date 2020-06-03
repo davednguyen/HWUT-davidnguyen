@@ -93,5 +93,12 @@ namespace UnitTests
             result.Email = "test@test.info";
             Assert.AreEqual("test@test.info", result.Email);
         }
+        [TestMethod]
+        public void ProductModel_Get_Logistics_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            result.Logistics = "1";
+            Assert.AreEqual("1", result.Logistics);
+        }
     }
 }
