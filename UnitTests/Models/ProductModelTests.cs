@@ -55,5 +55,13 @@ namespace UnitTests
             string expectImage = "http://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBWPuIz.img?ocid=msaut1";
             Assert.AreEqual(expectImage, result.Image);
         }
+
+        [TestMethod]
+        public void ProductModel_Get_URL_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            result.Url = "https://www.tesla.com/";
+            Assert.AreEqual("https://www.tesla.com/", result.Image);
+        }
     }
 }
