@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 using HWUT.Models;
 using System;
 
@@ -109,8 +111,15 @@ namespace UnitTests
         public void ProductModel_Get_Ratings_Default_Should_Pass()
         {
             var result = new ProductModel();
-            result.AverageRating();
-            Assert.AreEqual(1, result.Ratings);
+            Assert.AreEqual(5, result.AverageRating());
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_ToString_Should_Pass()
+        {
+            var result = new ProductModel();
+            var json = JsonSerializer.Serialize<ProductModel>(result);
+            Assert.AreEqual(json, result.ToString());
         }
     }
 }
