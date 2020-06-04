@@ -114,7 +114,7 @@ namespace UnitTests
         public void ProductModel_Get_Ratings_Default_Should_Pass()
         {
             var result = new ProductModel();
-            Assert.AreEqual(5, result.AverageRating());
+            Assert.IsNotNull(result.Ratings);
         }
 
         [TestMethod]
