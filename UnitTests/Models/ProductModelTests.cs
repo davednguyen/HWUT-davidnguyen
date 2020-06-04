@@ -126,10 +126,6 @@ namespace UnitTests
         public void ProductModel_Get_ProductModel_Should_Fail()
         {
             var result = new ProductModel();
-            //check null
-            Assert.IsNull(result);
-            //check logitic
-            Assert.AreEqual("1", result.Logistics);
             //check email
             Assert.AreEqual("test@info.test", result.Email);
         }
