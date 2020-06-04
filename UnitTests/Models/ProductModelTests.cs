@@ -123,15 +123,15 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Get_ProductModel_Should_Pass()
+        public void ProductModel_Get_ProductModel_Should_Fail()
         {
             var result = new ProductModel();
             //check null
-            Assert.IsNotNull(result);
+            Assert.IsNull(result);
             //check logitic
-            Assert.AreEqual("", result.Logistics);
+            Assert.AreEqual("1", result.Logistics);
             //check email
-            Assert.AreEqual("Unknown", result.Email);
+            Assert.AreEqual("test@info.test", result.Email);
         }
     }
 }
