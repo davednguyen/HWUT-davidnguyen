@@ -121,5 +121,17 @@ namespace UnitTests
             var json = JsonSerializer.Serialize<ProductModel>(result);
             Assert.AreEqual(json, result.ToString());
         }
+
+        [TestMethod]
+        public void ProductModel_Get_ProductModel_Should_Pass()
+        {
+            var result = new ProductModel();
+            //check null
+            Assert.IsNotNull(result);
+            //check logitic
+            Assert.AreEqual("", result.Logistics);
+            //check email
+            Assert.AreEqual("Unknown", result.Email);
+        }
     }
 }
