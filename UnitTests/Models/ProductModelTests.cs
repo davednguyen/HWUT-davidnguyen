@@ -132,5 +132,12 @@ namespace UnitTests
             //check email
             Assert.AreEqual("test@info.test", result.Email);
         }
+
+        [TestMethod]
+        public void ProductModel_Get_AverageRatings_Default_Should_Pass()
+        {
+            var result = new ProductModel();
+            Assert.AreEqual(5, result.AverageRating());
+        }
     }
 }
